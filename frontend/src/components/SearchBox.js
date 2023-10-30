@@ -25,11 +25,11 @@ function SearchBox() {
             ></Form.Control>
 
             <Button
-                type='submit'
+                type='Search'
                 variant='outline-success'
                 className='p-2'
-            >
-                Submit
+            >Search
+                
             </Button>
         </Form>
     )

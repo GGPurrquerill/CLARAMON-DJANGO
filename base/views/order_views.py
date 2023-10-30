@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from ..helpers import send_order_email
 
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated, IsAdminUser
@@ -60,6 +61,7 @@ def addOrderItems(request):
 
             product.countInStock -= item.qty
             product.save()
+            send_order_email(user.email)
 
         serializer = OrderSerializer(order, many=False)
         return Response(serializer.data)

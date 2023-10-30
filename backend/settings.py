@@ -26,7 +26,7 @@ SECRET_KEY = 'sc%oco$+(3$z$at=z4j)#l-+ym)+_b11389mdt2^12m$bf63%@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'proshop-demo.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'HARMON-demo.herokuapp.com']
 
 
 # Application definition
@@ -132,7 +132,7 @@ DATABASES = {
 # DATABASES = {
 #    'default': {
 #        'ENGINE': 'django.db.backends.postgresql',
-#        'NAME': 'proshop',
+#        'NAME': 'HARMON',
 #        'USER': 'dennisivy',
 #        'PASSWORD': os.environ.get('DB_PASS'),
 #        'HOST': os.environ.get('HOST'),
@@ -199,8 +199,19 @@ CORS_ALLOW_ALL_ORIGINS = True
 #AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
 #AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 
-#AWS_STORAGE_BUCKET_NAME = 'proshop-bucket-demo'
+#AWS_STORAGE_BUCKET_NAME = 'HARMON-bucket-demo'
 
 
 if os.getcwd() == '/app':
     DEBUG = False
+
+
+EMAIL_PASS="jvwjmtybvkranwfl"
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = "grahamgideon01@gmail.com"
+EMAIL_HOST_PASSWORD = "jvwjmtybvkranwfl"
